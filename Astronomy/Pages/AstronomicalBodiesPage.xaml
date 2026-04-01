@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Astronomy.Pages.AstronomicalBodiesPage"
+             Title="Астрономические тела">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="✨ Выберите небесное тело"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,0,0,20" />
+
+        <Button x:Name="btnSun" 
+                Text="☀️ Солнце"
+                Clicked="OnBodyClicked"
+                BackgroundColor="Orange"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50" />
+
+        <Button x:Name="btnMoon" 
+                Text="🌙 Луна"
+                Clicked="OnBodyClicked"
+                BackgroundColor="Gray"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50" />
+
+        <Button x:Name="btnEarth" 
+                Text="🌍 Земля"
+                Clicked="OnBodyClicked"
+                BackgroundColor="Blue"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50" />
+
+        <Button x:Name="btnComet" 
+                Text="☄️ Комета Галлея"
+                Clicked="OnBodyClicked"
+                BackgroundColor="DarkSlateBlue"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50" />
+
+    </VerticalStackLayout>
+
+</ContentPage>

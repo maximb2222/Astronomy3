@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:Astronomy.Pages"
+       x:Class="Astronomy.AppShell"
+       FlyoutIcon="moon.png">
+
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="100" BackgroundColor="DarkSlateBlue">
+            <Image Source="moon.png"
+                   HeightRequest="60"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Астрономия" Icon="moon.png">
+        <ShellContent Title="Фазы Луны" Icon="moon.png"
+                      ContentTemplate="{DataTemplate local:MoonPhasePage}" />
+        <ShellContent Title="Восход/Закат" Icon="sun.png"
+                      ContentTemplate="{DataTemplate local:SunrisePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Тела" Icon="sun.png">
+        <ShellContent Title="Астрономические тела" Icon="sun.png"
+                      ContentTemplate="{DataTemplate local:AstronomicalBodiesPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="О программе" Icon="question.png">
+        <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+
+</Shell>
